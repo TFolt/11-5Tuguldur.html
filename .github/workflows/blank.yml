@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Өвлийн Олимп 2026 | Милан-Кортина</title>
+
+<style>
+/* Үсгийн үндсэн хэмжээг 20px болгож тохируулав */
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1.2rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 8px 18px;
+  border-radius: 25px;
+}
+
+nav a:hover {
+  background: gold;
+  color: black;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* SECTION TOGGLE */
+section {
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SPORTS GRID */
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.sports-grid li {
+  background: #f1f3f5;
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 6px solid #003566;
+  font-weight: 500;
+}
+
+/* TABLE STYLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+th { 
+  background: #222; 
+  color: white; 
+  padding: 15px;
+  font-size: 0.95rem;
+}
+
+td { 
+  padding: 15px; 
+  border-bottom: 1px solid #eee; 
+}
+
+.total-col {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+/* FLAG STYLE */
+.flag-icon {
+  width: 35px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+/* FACTS & LINKS */
+.fact-card {
+  text-align: left;
+  background: #f0f7ff;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  border-left: 8px solid gold;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #003566;
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+h1 { font-size: 2.2rem; color: #2c3e50; margin-bottom: 1rem; }
+h3 { font-size: 1.3rem; margin-top: 0; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a onclick="showPage('home')">🏠 Нүүр</a>
+  <a onclick="showPage('sports')">🏅 Спорт</a>
+  <a onclick="showPage('medal')">🥇 Медаль</a>
+  <a onclick="showPage('facts')">📜 Баримт</a>
+</nav>
+
+<div class="container">
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <h1>🏂 Өвлийн Олимп 2026</h1>
+    <p>Итали улсын <strong>Милан</strong> болон <strong>Кортина-д'Ампеццо</strong> хотуудад амжилттай зохион байгуулагдлаа.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/2026_Winter_Olympics_logo.svg/1200px-2026_Winter_Olympics_logo.svg.png" width="300" alt="Logo">
+  </section>
+
+  <!-- SPORTS -->
+  <section id="sports">
+    <h1>🏅 Спортын төрлүүд</h1>
+    <ul class="sports-grid">
+      <li>⛷️ Alpine Skiing</li>
+      <li>🎿 Cross-country</li>
+      <li>🏂 Snowboarding</li>
+      <li>⛸️ Figure Skating</li>
+      <li>🏒 Ice Hockey</li>
+      <li>🎯 Biathlon</li> 
+      <li>🛷 Luge</li>
+      <li>⛸️ Short Track</li>
+      <li>🥌 Curling</li>
+      <li>🧗 Ski Mountaineering</li>
+    </ul>
+  </section>
+
+  <!-- MEDAL TABLE -->
+  <section id="medal">
+    <h1>🥇 Медалийн хүснэгт</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Улс</th>
+          <th>Алт</th>
+          <th>Мөнгө</th>
+          <th>Хүрэл</th>
+          <th>Нийт</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://flagcdn.com/w80/no.png" class="flag-icon">Норвеги</td>
+          <td>16</td><td>8</td><td>13</td><td class="total-col">37</td>
+        </tr>
+        <tr>
+          <td><img src="https://flagcdn.com/w80/de.png" class="flag-icon">Герман</td>
+          <td>12</td><td>10</td><td>5</td><td class="total-col">27</td>
+        </tr>
+        <tr>
+          <td><img src="https://flagcdn.com/w80/us.png" class="flag-icon">АНУ</td>
+          <td>10</td><td>11</td><td>7</td><td class="total-col">28</td>
+        </tr>
+        <tr>
+          <td><img src="https://flagcdn.com/w80/it.png" class="flag-icon">Итали</td>
+          <td>9</td><td>10</td><td>8</td><td class="total-col">27</td>
+        </tr>
+        <tr>
+          <td><img src="https://flagcdn.com/w80/ca.png" class="flag-icon">Канад</td>
+          <td>4</td><td>8</td><td>14</td><td class="total-col">26</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FACTS -->
+  <section id="facts">
+    <h1>📜 Сонирхолтой баримтууд</h1>
+    <div class="fact-card">
+      <h3>🌍 Түүхэн олимп</h3>
+      <p>Милан-Кортина 2026 нь өвлийн олимпын түүхэнд анх удаа хоёр хотын нэрээр албан ёсоор нэрлэгдсэн наадам юм.</p>
+    </div>
+    <div class="fact-card">
+      <h3>🐾 Маскот: Тина ба Мило</h3>
+      <p>Тина (цагаан) болон Мило (бор) хэмээх хоёр үен бол 2026 оны олимпын албан ёсны бэлгэдэл юм.</p>
+    </div>
+    <a href="https://olympics.com/en/milan-cortina-2026" target="_blank" class="btn-link">🌐 Албан ёсны сайт</a>
+  </section>
+
+</div>
+
+<script>
+function showPage(pageId) {
+  let sections = document.querySelectorAll("section");
+  sections.forEach(sec => sec.classList.remove("active"));
+  document.getElementById(pageId).classList.add("active");
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
